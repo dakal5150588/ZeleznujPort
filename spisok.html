@@ -48,10 +48,10 @@
         <th>телефон</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody ng-repeat="course in data.corses">
         <tr>
-        <td>Борисов</td>
-        <td>Андрей</td>
+        <td>{{course.name}}</td>
+        <td>{{course.passed}}</td>
         <td>Речфлот</td>
         <td>0992424512</td>
         </tr>
