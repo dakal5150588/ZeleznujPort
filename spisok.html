@@ -10,14 +10,10 @@
     var model = {
       user: "User1",
       courses:[
-        {surname:"Невмержицкий"//,name:"Роман",organization:"укрречфлот",tel:'0995461915'
-        },
-        {surname:"Яхно"//,name:"Антон",organization:"Уклон",tel:"0985644545"
-        },
-        {surname:"Пупкин"//,name:"Станислав",organization:"Маженто",tel:"0504561212"
-        },
-        {surname:"Яхно"//,name:"Антон",organization:"Уклон",tel:"0985644545"
-        }]
+        {surname:"Невмержицкий",name:"Роман",organization:"укрречфлот",tel:'0995461915'},
+        {surname:"Яхно",name:"Антон",organization:"Уклон",tel:"0985644545"},
+        {surname:"Пупкин",name:"Станислав",organization:"Маженто",tel:"0504561212"},
+        {surname:"Яхно",name:"Антон",organization:"Уклон",tel:"0985644545" }]
     };
     //модуль
     var MyApp=angular.module("MyApp",[]);
@@ -30,9 +26,9 @@
       $scope.addNewCourse = function(){
         $scope.data.courses.push({
           surname:$scope.courseName,
-          //name:$scope.courseName,
-          //organization:$scope.courseName,
-          //tel:$scope.courseName
+          name:$scope.courseName,
+          organization:$scope.courseName,
+          tel:$scope.courseName
         });
         $scope.courseName ="";
       }
@@ -60,17 +56,17 @@
         <thead>
         <tr>
         <th>Фамилия</th>
-        <!--<th>имя</th>
+        <th>имя</th>
         <th>организация</th>
-        <th>телефон</th>-->
+        <th>телефон</th>
         </tr>
         </thead>
         <tbody>
         <tr ng-repeat="course in data.courses">
         <td>{{course.surname}}</td>
-        <!--<td>{{course.name}}</td>
+        <td>{{course.name}}</td>
         <td>{{course.organization}}</td>
-        <td>{{course.tel}}</td>-->
+        <td>{{course.tel}}</td>
         </tr>
         </tbody>
         </table>
