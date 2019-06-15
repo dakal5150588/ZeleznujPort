@@ -1,7 +1,50 @@
 <DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-ng-app="MyApp">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-</head>
+  <title>Главная</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div ng-controller="MyController">
+          {{1+3}}
+          <p>{{var1}}</p>
+          <p>{{obj.var1}}</p>
+          <p>{{obj.var2}}</p>
+          <p>{{book[0].title}}</p>
+          
+        </div>
+        
+      </div>
+    </main>
+    <script>
+      var data= 'данные из модели';
+      (function(){
+        var app = angular.module('MyApp',[]);
+      //consol.log(app);
+      app.controller('MyController',function($scope){
+        //consol.log($scope);
+        $scope.var1=data;
+        //обьект
+        $scope.obj={
+          var1:'test',
+          var2:5150488
+        };
+        //масив
+        $scope.book=[
+          {title: "отель Перекресток" ,price:"300"},
+          {title: "отель Перекресток" ,price:"200"},
+          {title: "отель Перекресток" ,price:"350"},
+          {title: "отель Перекресток" ,price:"400"}
+          
+        ];
+      });
+      })()
+      
+    
+    </script>
+  </body>
 </html>
