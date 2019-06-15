@@ -1,0 +1,29 @@
+<DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Angular</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+main{
+margin-top:100px;
+margin-bottom:100px;
+}
+</style>
+</head>
+<body>
+<main>
+<div class="container">
+<input type="text" id="name" class="form-control">
+<p><i id='res'></i></p>
+</div>
+</main>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+$function(){
+$('#name').on('keyup',function(){
+$('#res').text($(this).val())
+};)
+};
+</body>
+<!--https://www.youtube.com/watch?v=Z_QzhQjuFq4-->
+</html>
