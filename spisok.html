@@ -5,6 +5,23 @@
   <title>Главная</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  <script>
+    //модель
+    var model= {
+      user:User1,
+      courses:[
+        {name:"Невмержицкий,Роман",passed:true},
+        {name:"Сталин,Евгений",passed:true},
+        {name:"Жорнов,Стас",passed:true},
+        {name:"Люлькин,Антон",passed:true}]
+    };
+    //модуль
+    var MyApp=angular.module("MyApp",[]);
+    //контроллер
+    MyApp.controller("MyAppCtrl",function($scope){
+      $scope.list=model;
+    });
+  </script>
   </head>
   <body>
     <main>
