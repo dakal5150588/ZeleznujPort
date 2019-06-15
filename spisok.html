@@ -10,10 +10,10 @@
     var model = {
       user: "User1",
       courses:[
-        {surname:"Невмержицкий",name:"Роман",organization:"укрречфлот",tel:'0995461915'},
-        {surname:"Яхно",name:"Антон",organization:"Уклон",tel:"0985644545"},
-        {surname:"Пупкин",name:"Станислав",organization:"Маженто",tel:"0504561212"},
-        {surname:"Яхно",name:"Антон",organization:"Уклон",tel:"0985644545" }]
+        {surname:"Невмержицкий",name:"Роман",organization:"укрречфлот",tel:'0995461915',passed:true},
+        {surname:"Яхно",name:"Антон",organization:"Уклон",tel:"0985644545",passed:true},
+        {surname:"Пупкин",name:"Станислав",organization:"Маженто",tel:"0504561212",passed:true},
+        {surname:"Яхно",name:"Антон",organization:"Уклон",tel:"0985644545",passed:false }]
     };
     //модуль
     var MyApp=angular.module("MyApp",[]);
@@ -67,6 +67,7 @@
         <td>{{course.name}}</td>
         <td>{{course.organization}}</td>
         <td>{{course.tel}}</td>
+          <td><input type="checkbox"ng-model="course.passed"/></td>
         </tr>
         </tbody>
         </table>
