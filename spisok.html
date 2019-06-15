@@ -26,9 +26,9 @@
       $scope.addNewCourse = function(){
         $scoup.data.courses.push({
           surname:$scope.courseName,
-          name:$scope.courseName,
-          organization:$scope.courseName,
-          tel:$scope.courseName
+          //name:$scope.courseName,
+          //organization:$scope.courseName,
+          //tel:$scope.courseName
         });
         $scope.courseName ="";
       }
@@ -42,7 +42,7 @@
         <div class="page-header">
         <div class="page-header">
         <h1>Список работников БЦ</h1>
-        <h3>Мистер:{{list.user}}Количество зарегистрированых людей:{{list.courses.length}}</h3>
+        <h3>Мистер: {{list.user}} Количество зарегистрированых людей: {{list.courses.length}} </h3>
         </div>
         </div>
         <div class="panel">
