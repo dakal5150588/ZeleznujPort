@@ -14,17 +14,18 @@ margin-bottom:100px;
 <body>
 <main>
 <div class="container">
-<input type="text" id="name" class="form-control">
-<p><i id='res'></i></p>
+<input type="text" id="name" class="form-control" ng-model="name">
+<p><i id='res'>{{name}}</i></p>
 </div>
 </main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>-->
 <script>
-  $function(){
+  /*$function(){
 $('#name').on('keyup',function(){
 $('#res').text($(this).val());
 });
-});
+});*/
   </script>
 </body>
 <!--https://www.youtube.com/watch?v=Z_QzhQjuFq4-->
