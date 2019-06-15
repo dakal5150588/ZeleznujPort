@@ -13,14 +13,13 @@
         {surname:"Невмержицкий",name:"Роман",organization:"укрречфлот",tel:0995461915},
         {surname:"Яхно",name:"Антон",organization:"Уклон",tel:0985644545},
         {surname:"Пупкин",name:"Станислав",organization:"Маженто",tel:0504561212},
-        {name:"Сталин",passed:true},
-        {name:"Жорнов",passed:true},
-        {name:"Люлькин",passed:true}]
+        {surname:"Яхно",name:"Антон",organization:"Уклон",tel:0985644545}]
     };
     //модуль
     var MyApp=angular.module("MyApp",[]);
     //контроллер
     MyApp.controller("MyAppCtrl",function($scope){
+      $scope.list=model;
       $scope.data=model;
     });
   </script>
@@ -93,7 +92,7 @@
       });
       })()
       
-    
+    <!--https://www.youtube.com/watch?v=kWDVt6zpBbU-->
     </p>
   </body>
 </html>
