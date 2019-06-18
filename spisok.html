@@ -32,7 +32,12 @@
         });
         $scope.courseName ="";
       }
-                                 
+       $scope.showText=function(passed){
+       return passed ? "Да":"Нет";
+       }
+      $scope.setStyle = function(){
+        return passed ? "color:green":"color:red;font-weight:bold";
+      }
     });
   </script>
   </head>
@@ -68,7 +73,11 @@
         <td>{{course.organization}}</td>
         <td>{{course.tel}}</td>
           <td><input type="checkbox"ng-model="course.passed"/></td>
-        </tr>
+          <td><span style="{{setStyle(course.passed)}}"/>
+            {{showText(course.passed)}}
+          </span></td>
+          
+          </tr>          
         </tbody>
         </table>
           {{1+3}}
